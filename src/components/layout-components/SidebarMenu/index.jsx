@@ -50,22 +50,6 @@ const SidebarMenu = (props) => {
                 onClick={toggleSidebarMobile}
                 activeClassName="active"
                 className="nav-link-simple"
-                to={routes["weather"].path}
-              >
-                <span className="sidebar-icon">
-                  <FilterListTwoToneIcon />
-                </span>
-                  Weather Today
-                <span className="sidebar-icon-indicator sidebar-icon-indicator-right">
-                  <ChevronRightTwoToneIcon />
-                </span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={toggleSidebarMobile}
-                activeClassName="active"
-                className="nav-link-simple"
                 to={routes["search"].path}
               >
                 <span className="sidebar-icon">

@@ -2,8 +2,8 @@ import apiClient from "./apiClient";
 
 const url = "/news";
 
-const getNewNews = (start, limit) => {
-  return apiClient.get(`${url}?start=${start}&limit=${limit}`);
+const getNewNews = async () => {
+  return apiClient.get(`${url}`);
 };
 
 const getTopicNews = (start, limit, id) => {

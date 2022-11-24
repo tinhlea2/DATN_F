@@ -1,12 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import API from "api";
 import { localAuthenticate } from "utils/localAuth";
+import axios from "axios";
 
 export const getNewNews = createAsyncThunk(
   "news",
-  ({ start, limit, onComplete }) => {
+  ({start, limit, onComplete }) => {
     return API.news
-      .getNewNews(start, limit)
+      .getNewNews()
       .then(({ data }) => {
         onComplete(null, data);
         return data;

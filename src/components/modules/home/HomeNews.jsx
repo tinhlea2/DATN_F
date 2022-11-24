@@ -7,7 +7,7 @@ import {
     Container,
     Grid,
 } from "@material-ui/core";
-import { newsActions } from "state/modules/news/newsSlice";
+import { getNewNews, newsActions } from "state/modules/news/newsSlice";
 import { useDispatch } from "react-redux";
 import useNotification from "utils/hooks/notification";
 import { useStyles } from "components/modules/publics/styles";
@@ -26,9 +26,8 @@ const HomeNews = () => {
     useEffect(() => {
         setIsGet(true);
         dispatch(newsActions.getNewNews({
-            start: start,
-            limit: 10,
             onComplete: (error, data) => {
+                setIsGet(false);
                 if (!error) {
                     console.log(data);
                     setGetList(data);
@@ -39,7 +38,7 @@ const HomeNews = () => {
                 return showError(errorMessages);
             }
         }));
-    }, [dispatch, start]);
+    }, [dispatch]);
     return (isFullNews
         ? <Card className="mb-5">
             <div className="card-header d-flex align-items-center justify-content-between card-header-alt p-0">
@@ -71,10 +70,9 @@ const HomeNews = () => {
                             className={classes.btnBack}
                             onClick={() => {
                                 setStart(start - 10);
-                            }}
-                        >
+                            }}>
                             BACK
-                </Button>
+                        </Button>
                     </Box>
                 </div></div>}
         </Container>)
