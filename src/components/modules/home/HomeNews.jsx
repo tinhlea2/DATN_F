@@ -22,6 +22,7 @@ const HomeNews = () => {
     const [isGet, setIsGet] = useState(true);
     const [start, setStart] = useState(0);
     const [news, setNews] = useState({});
+    const [image, setImage] = useState([]);
     const [isFullNews, setIsFullNews] = useState(false);
     useEffect(() => {
         setIsGet(true);
@@ -29,8 +30,8 @@ const HomeNews = () => {
             onComplete: (error, data) => {
                 setIsGet(false);
                 if (!error) {
-                    console.log(data);
-                    setGetList(data);
+                    console.log(data.results);
+                    setGetList(data.results);
                     setIsGet(false);
                     return;
                 }
@@ -42,7 +43,7 @@ const HomeNews = () => {
     return (isFullNews
         ? <Card className="mb-5">
             <div className="card-header d-flex align-items-center justify-content-between card-header-alt p-0">
-                <NewsDetails news={news} setIsFullNews={setIsFullNews} setNews={setNews} />
+                <NewsDetails news={news} setImage={news.images} setIsFullNews={setIsFullNews} setNews={setNews} />
             </div>
         </Card>
         : <Container maxWidth="xl">
@@ -50,7 +51,7 @@ const HomeNews = () => {
                 <div className="mb-spacing-6">
                     <Grid container spacing={6}>
                         {getList.map(value => {
-                            return <CardNews key={value.id} news={value} setIsFullNews={setIsFullNews} setNews={setNews} />
+                            return <CardNews key={value.id} news={value} setIsFullNews={setIsFullNews} setNews={setNews}/>
                         })}
                     </Grid>
                     <Box p={3} display="flex" flexDirection="row-reverse">
@@ -59,7 +60,7 @@ const HomeNews = () => {
                             className={classes.btnNext}
                             style={{ marginLeft: "25px" }}
                             onClick={() => {
-                                setStart(start + 10);
+                                setStart(numpage + 1);
                             }}
                         >
                             NEXT
@@ -68,8 +69,9 @@ const HomeNews = () => {
                             disabled={start === 0}
                             variant="contained"
                             className={classes.btnBack}
+                            style={{ marginLeft: "25px" }}
                             onClick={() => {
-                                setStart(start - 10);
+                                setStart(start);
                             }}>
                             BACK
                         </Button>

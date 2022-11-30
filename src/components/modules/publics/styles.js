@@ -15,7 +15,7 @@ export const useStyles = makeStyles(() => ({
     },
   },
   btnBack: {
-    backgroundColor: "white",
+    backgroundColor: "",
     color: "#35B6B8",
     border: "1px solid #cddbda",
   },

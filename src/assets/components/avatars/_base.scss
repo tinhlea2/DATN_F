@@ -194,7 +194,10 @@
 // Initials avatars
 
 .avatar-initials {
+  margin-top : 5px ;
   text-align: center;
-  text-transform: uppercase;
+  // text-transform: uppercase;
+  font-style: italic;
+  font-size: small;
 }
 

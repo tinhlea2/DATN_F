@@ -21,7 +21,7 @@ const CardNews = ({ news, setIsFullNews, setNews }) => {
             <CardContent className="card-body-avatar px-4 pb-4" style={{ height: "300px" }}>
                 <div className="avatar-icon-wrapper rounded-pill border-white border-3 avatar-icon-wrapper--sm">
                     <div className="avatar-icon rounded-pill" style={{ backgroundColor: "white" }}>
-                        <img alt="..." src={topics[parseInt(news.topic_id, 10) - 1]} height="74" width="74" />
+                        <img alt="..." src={news.thumbnail} height="74" width="74" />
                     </div>
                 </div>
                 <h5 className="card-title font-weight-bold font-size-xl">

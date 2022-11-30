@@ -87,7 +87,7 @@ const TopicsNews = () => {
                             setTopic(4);
                             setIsListTopic(true);
                         }}>
-                            <img alt="..." className="card-img-top" src="https://www.pvpower.vn/wp-content/uploads/2017/05/nhontrach2.jpg" height="257" />
+                            <img alt="..." className="card-img-top" src="https://www.evn.com.vn/userfile/User/xuantien/images/2022/11/Anh3CPMB12112022(1).jpg" height="257" />
                             <CardContent className="card-body-avatar px-4 pb-4">
                                 <div className="avatar-icon-wrapper rounded-pill border-white border-3 avatar-icon-wrapper--sm">
                                     <div className="avatar-icon rounded-pill" style={{ backgroundColor: "white" }}>

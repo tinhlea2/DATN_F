@@ -2,7 +2,7 @@ import apiClient from "./apiClient";
 
 const url = "/news";
 
-const getNewNews = async () => {
+const getNewNews = async (numpage) => {
   return apiClient.get(`${url}`);
 };
 

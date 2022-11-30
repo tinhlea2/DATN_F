@@ -377,6 +377,7 @@ body {
 .card-body-avatar {
   position: relative;
   padding-top: calc(#{$card-spacer-x} + 50px) !important;
+  height: 100%;
 
   & > .avatar-icon-wrapper {
     margin: 0;
