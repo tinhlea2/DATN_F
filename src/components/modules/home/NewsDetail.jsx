@@ -7,6 +7,7 @@ const NewsDetails = ({ news, setImage, setIsFullNews, setNews }) => {
     const create_at = new Date(parseInt(news.post_at) * 1000);
     // setImages={setImage}
     // const [image, setImage] = useState({})
+    // const test = getLengh(news.content.value())
     return <div>
         {/* <img alt="..." className="card-img-top" src={news.thumbnail} /> */}
         <div  className="card-body-avatar px-4 pb-4">
@@ -36,14 +37,14 @@ const NewsDetails = ({ news, setImage, setIsFullNews, setNews }) => {
             </div>
             <span className="card-body-avatar px-4 pb-4">
                     {
-                        // const text = news.images.value();
                         news.contents.map((value ,i) => 
-                    {
-                        if (value.order==i) 
+                    {   
+                        let test = value.paragraph.split("<br>")
                         return <div>
-                            <p>{value.contents}</p>
-                            <img className="card-img-top" src={value.src} height="74" width="74"/>
-                            <h6 className="avatar-initials" >{value.title}</h6>
+                            <p>{test[0]}</p>
+                            <p>{test[1]}</p> 
+                            <img className="card-img-top" src={value.image.trim() === "" ?"https://congdoandlvn.org.vn/pic/banner/Ky-niem-6_638041001767718561_HasThumb.jpg":value.image} height="74" width="74"/>
+                            <h6 className="avatar-initials" >{value.description_img}</h6>
                         </div>
                     })}
 
