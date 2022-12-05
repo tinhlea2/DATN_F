@@ -20,26 +20,28 @@ const HomeNews = () => {
     const { showError } = useNotification();
     const [getList, setGetList] = useState([]);
     const [isGet, setIsGet] = useState(true);
-    const [start, setStart] = useState(0);
+    const [numpage, setStart] = useState(1);
     const [news, setNews] = useState({});
     const [image, setImage] = useState([]);
     const [isFullNews, setIsFullNews] = useState(false);
     useEffect(() => {
         setIsGet(true);
         dispatch(newsActions.getNewNews({
+            numpage: numpage,
             onComplete: (error, data) => {
                 setIsGet(false);
                 if (!error) {
                     console.log(data.results);
                     setGetList(data.results);
                     setIsGet(false);
+                    console.log(data.results);
                     return;
                 }
                 const errorMessages = Object.values(error).join(". ");
                 return showError(errorMessages);
             }
         }));
-    }, [dispatch]);
+    }, [dispatch,numpage]);
     return (isFullNews
         ? <Card className="mb-5">
             <div className="card-header d-flex align-items-center justify-content-between card-header-alt p-0">
@@ -56,7 +58,7 @@ const HomeNews = () => {
                     </Grid>
                     <Box p={3} display="flex" flexDirection="row-reverse">
                         <Button
-                            disabled={getList.length < 10}
+                            disabled={numpage === 6}
                             className={classes.btnNext}
                             style={{ marginLeft: "25px" }}
                             onClick={() => {
@@ -66,12 +68,12 @@ const HomeNews = () => {
                             NEXT
                         </Button>
                         <Button
-                            disabled={start === 0}
+                            disabled={numpage === 1}
                             variant="contained"
                             className={classes.btnBack}
                             style={{ marginLeft: "25px" }}
                             onClick={() => {
-                                setStart(start);
+                                setStart(numpage-1);
                             }}>
                             BACK
                         </Button>
