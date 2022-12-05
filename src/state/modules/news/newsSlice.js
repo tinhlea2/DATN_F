@@ -5,9 +5,9 @@ import axios from "axios";
 
 export const getNewNews = createAsyncThunk(
   "news",
-  ({start, limit, onComplete }) => {
+  ({numpage, onComplete }) => {
     return API.news
-      .getNewNews()
+      .getNewNews(numpage)
       .then(({ data }) => {
         onComplete(null, data);
         return data;

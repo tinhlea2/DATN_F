@@ -3,7 +3,7 @@ import apiClient from "./apiClient";
 const url = "/news";
 
 const getNewNews = async (numpage) => {
-  return apiClient.get(`${url}`);
+  return apiClient.get(`${url}?page=${numpage}`);
 };
 
 const getTopicNews = (start, limit, id) => {
