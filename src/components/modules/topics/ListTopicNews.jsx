@@ -27,12 +27,12 @@ const ListTopicNews = ({ topicId, setIsListTopic }) => {
         setIsGet(true);
         dispatch(newsActions.getTopicNews({
             id: topicId,
-            start: start,
-            limit: 10,
+            // start: start,
+            // limit: 10,
             onComplete: (error, data) => {
                 if (!error) {
-                    console.log(data);
-                    setGetList(data);
+                    console.log(data.results[0].news);
+                    setGetList(data.results[0].news);
                     setIsGet(false);
                     return;
                 }
@@ -40,7 +40,7 @@ const ListTopicNews = ({ topicId, setIsListTopic }) => {
                 return showError(errorMessages);
             }
         }));
-    }, [dispatch, start]);
+    }, [dispatch]);
     return (isFullNews
         ? <Card className="mb-5">
             <div className="card-header d-flex align-items-center justify-content-between card-header-alt p-0">
@@ -63,7 +63,7 @@ const ListTopicNews = ({ topicId, setIsListTopic }) => {
             </Box>
             <Box p={3} display="flex" flexDirection="row-reverse">
                 <Button
-                    disabled={getList.length < 10}
+                    // disabled={getList.length < 10}
                     className={classes.btnNext}
                     style={{ marginLeft: "25px" }}
                     onClick={() => {

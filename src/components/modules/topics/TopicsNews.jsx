@@ -1,19 +1,46 @@
 import { CardContent, Grid } from "@material-ui/core";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ListTopicNews from "./ListTopicNews";
+import { useDispatch } from "react-redux";
+import { getlistTopicNews, newsActions } from "state/modules/news/newsSlice";
 
 const TopicsNews = () => {
     const [isListTopic, setIsListTopic] = useState(false);
-    const [topic, setTopic] = useState(1);
+    const dispatch = useDispatch();
+    const [topic, setTopic] = useState([]);
+    const [isGet, setIsGet] = useState(true);
+    const [topicId, setTopicId] = useState(1);
+    useEffect(() => {
+        setIsGet(true);;
+        dispatch(newsActions.getlistTopicNews({
+            onComplete: (error, data) => {
+                setIsGet(false);
+                if (!error) {
+                    // console.log(data.results);
+                    setTopic(data.results);
+                    setIsGet(false);
+                    console.log(data.results);
+                    return;
+                }
+                const errorMessages = Object.values(error).join(". ");
+                return showError(errorMessages);
+            }
+        }));
+    }, [dispatch]);
     return (isListTopic
-        ? <ListTopicNews topicId={topic} setIsListTopic={setIsListTopic} />
+        ? <ListTopicNews topicId={topicId} setIsListTopic={setIsListTopic} />
         : <div className="example-card-seamless mb-spacing-6">
             <div className="mb-spacing-6">
                 <Grid container spacing={6}>
                     <Grid item xl={4} lg={6}>
                         <a className="card card-box-hover-rise bg-white" onClick={() => {
-                            setTopic(1);
-                            setIsListTopic(true);
+                            topic.map((value,i)=>{
+                                if (i === 1) {
+                                    setTopicId(value.id);
+                                    console.log(value.id)
+                                    setIsListTopic(true);
+                                }
+                            })   
                         }}>
                             <img alt="..." className="card-img-top" src="https://img.timviecdientu.com/2019/08/trien-vong-nganh-dien-tu-vien-thong-4.jpg" height="257" />
                             <CardContent className="card-body-avatar px-4 pb-4">
