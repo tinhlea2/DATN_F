@@ -19,11 +19,27 @@ export const getNewNews = createAsyncThunk(
   }
 );
 
+export const getlistTopicNews = createAsyncThunk(
+  "list-topics-news",
+  ({ onComplete }) => {
+    return API.news
+      .getlistTopicNews()
+      .then(({ data }) => {
+        onComplete(null, data);
+        return data;
+      })
+      .catch((error) => {
+        onComplete(error.response.data, null);
+        throw new Error(error.response.data);
+      });
+  }
+);
+
 export const getTopicNews = createAsyncThunk(
   "topics-news",
-  ({ id, start, limit, onComplete }) => {
+  ({ id,onComplete }) => {
     return API.news
-      .getTopicNews(start, limit, id)
+      .getTopicNews(id)
       .then(({ data }) => {
         onComplete(null, data);
         return data;
@@ -60,6 +76,9 @@ export const newsSlice = createSlice({
     getNewNews: {
       errors: {},
     },
+    getlistTopicNews: {
+      errors: {},
+    },
     getTopicNews: {
       errors: {},
     },
@@ -76,6 +95,9 @@ export const newsSlice = createSlice({
     [getNewNews.rejected](state, action) {
       state.getNewNews.errors = action.error;
     },
+    [getlistTopicNews.rejected](state, action) {
+      state.getlistTopicNews.errors = action.error;
+    },
     [getTopicNews.rejected](state, action) {
       state.getTopicNews.errors = action.error;
     },
@@ -90,6 +112,7 @@ export const newsActions = {
   getNewNews,
   getTopicNews,
   getSearchNews,
+  getlistTopicNews
 };
 
 export default newsActions.reducer;

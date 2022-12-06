@@ -6,8 +6,12 @@ const getNewNews = async (numpage) => {
   return apiClient.get(`${url}?page=${numpage}`);
 };
 
-const getTopicNews = (start, limit, id) => {
-  return apiClient.get(`${url}/topic/${id}?start=${start}&limit=${limit}`);
+const getlistTopicNews = async () => {
+  return apiClient.get(`/topic`);
+};
+
+const getTopicNews = async (id) => {
+  return apiClient.get(`/topic/${id}`);
 };
 
 const getSearchNews = (key) => {
@@ -18,6 +22,7 @@ const newsAPI = {
   getNewNews,
   getTopicNews,
   getSearchNews,
+  getlistTopicNews
 };
 
 export default newsAPI;
