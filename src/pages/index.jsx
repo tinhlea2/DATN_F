@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <>
       <PageTitle
-        titleHeading="Home News"
-        titleDescription="See the new news on this page"
+        titleHeading="Trang chủ tin tức"
+        titleDescription="Tin tức điện lực mới nhất luôn được cập nhật"
       ></PageTitle>
 
       <HomeNews />

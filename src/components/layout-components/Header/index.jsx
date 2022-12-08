@@ -67,7 +67,7 @@ const Header = (props) => {
               <span className="hamburger-inner" />
             </span>
           </button>
-          <h5 className={classes.welcome}>Welcome to envcrawl</h5>
+          <h5 className={classes.welcome}>Chào mừng bạn đến với trang web tổng hợp tin tức điện lực</h5>
         </div>
       </div>
     </>

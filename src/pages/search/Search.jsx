@@ -9,8 +9,8 @@ const Search = () => {
     return (
         <>
             <PageTitle
-                titleHeading="Search"
-                titleDescription="Search news on this page"
+                titleHeading="Tìm kiếm"
+                titleDescription="Tìm kiếm tin tức theo tiêu đề của tin tức"
             ></PageTitle>
 
             <Card className="mb-5">

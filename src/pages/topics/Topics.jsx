@@ -8,8 +8,8 @@ const Topics = () => {
     return (
         <>
             <PageTitle
-                titleHeading="Topics News"
-                titleDescription="See the topics news on this page"
+                titleHeading="Chủ đề tin tức"
+                titleDescription="Xem tin tức theo các chủ đề"
             ></PageTitle>
 
             <TopicsNews />

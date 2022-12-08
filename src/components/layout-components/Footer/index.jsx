@@ -24,14 +24,14 @@ const Footer = (props) => {
               component={Link}
               to="/"
               className="rounded-sm">
-              Home
+              Trang chủ
             </ListItem>
             <ListItem
               button
               component={Link}
               to="/topics"
               className="rounded-sm">
-              Topics
+              Chủ đề 
             </ListItem>
             <ListItem
               button

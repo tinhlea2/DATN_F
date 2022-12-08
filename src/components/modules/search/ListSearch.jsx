@@ -41,15 +41,16 @@ const ListSearch = ({ listNews, setIsFullNews, setNews }) => {
                                     <span>{create_at && create_at.getDate() + "/" + create_at.getMonth() + "/" + create_at.getFullYear()}</span>
                                 </td>
                                 <td className="text-right">
-                                    <Button
+                                    <a
                                         className="btn-neutral-first mx-1 rounded-sm shadow-none hover-scale-sm d-40 border-0 p-0 d-inline-flex align-items-center justify-content-center"
                                         onClick={() => {
                                             setIsFullNews(true);
                                             setNews(value);
                                         }}
                                     >
-                                        <FontAwesomeIcon icon={['fas', 'edit']} className="font-size-sm" />
-                                    </Button>
+                                        {/* <FontAwesomeIcon icon={['fas', 'edit']} className="font-size-sm" /> */}
+                                        {/* <a>Chi tiết</a> */}
+                                    </a>
                                 </td>
                             </tr>
                                 <tr className="divider"></tr></>)

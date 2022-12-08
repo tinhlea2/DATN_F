@@ -26,7 +26,7 @@ const SidebarMenu = (props) => {
         <div className="sidebar-navigation">
           <SidebarWidget />
           <div className="sidebar-header">
-            <span>Navigation</span>
+            <span>Newspage</span>
           </div>
           <ul>
             <li>
@@ -39,7 +39,7 @@ const SidebarMenu = (props) => {
                 <span className="sidebar-icon">
                   <BusinessCenterTwoToneIcon />
                 </span>
-                Home
+                Trang chủ
                 <span className="sidebar-icon-indicator sidebar-icon-indicator-right">
                   <ChevronRightTwoToneIcon />
                 </span>
@@ -55,7 +55,7 @@ const SidebarMenu = (props) => {
                 <span className="sidebar-icon">
                   <FilterListTwoToneIcon />
                 </span>
-                  Search
+                  Tìm kiếm
                 <span className="sidebar-icon-indicator sidebar-icon-indicator-right">
                   <ChevronRightTwoToneIcon />
                 </span>
@@ -71,23 +71,7 @@ const SidebarMenu = (props) => {
                 <span className="sidebar-icon">
                   <FilterListTwoToneIcon />
                 </span>
-                  Topics
-                <span className="sidebar-icon-indicator sidebar-icon-indicator-right">
-                  <ChevronRightTwoToneIcon />
-                </span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                onClick={toggleSidebarMobile}
-                activeClassName="active"
-                className="nav-link-simple"
-                to={routes["forecasts"].path}
-              >
-                <span className="sidebar-icon">
-                  <FilterListTwoToneIcon />
-                </span>
-                  Forecasts
+                  Chủ đề
                 <span className="sidebar-icon-indicator sidebar-icon-indicator-right">
                   <ChevronRightTwoToneIcon />
                 </span>

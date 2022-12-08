@@ -45,8 +45,8 @@ const SidebarHeader = (props) => {
               />
             </div>
             <div className="app-sidebar-logo--text">
-              <span>EVNCRAWL</span>
-              <b>News</b>
+              <span>Tin tức điện lực</span>
+              <b>tổng hợp</b>
             </div>
           </NavLink>
         </div>

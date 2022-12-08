@@ -40,7 +40,7 @@ const SearchNews = () => {
                     onComplete: (error, data) => {
                         setIsGetList(false);
                         if (!error) {
-                            setListSearch(data);
+                            setListSearch(data.results);
                             setPrevKeySearch(keySearch);
                         }
                         const errorMessages = Object.values(error).join(". ");

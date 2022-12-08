@@ -15,7 +15,7 @@ const getTopicNews = async (id) => {
 };
 
 const getSearchNews = (key) => {
-  return apiClient.get(`${url}/search?searchKey=${key}`);
+  return apiClient.get(`/search?search=${key}`);
 };
 
 const newsAPI = {

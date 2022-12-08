@@ -63,8 +63,13 @@ const TopicsNews = () => {
                     </Grid>
                     <Grid item xl={4} lg={6}>
                         <a className="card card-box-hover-rise bg-white" onClick={() => {
-                            setTopic(2);
-                            setIsListTopic(true);
+                            topic.map((value,i)=>{
+                                if (i === 2) {
+                                    setTopicId(value.id);
+                                    console.log(value.id)
+                                    setIsListTopic(true);
+                                }
+                            });
                         }}>
                             <img alt="..." className="card-img-top" src="https://image.sggp.org.vn/w840/Uploaded/2020/evofjasfzyr/2019_12_09/1_7_obgt.gif" height="257" />
                             <CardContent className="card-body-avatar px-4 pb-4">
@@ -87,8 +92,13 @@ const TopicsNews = () => {
                     </Grid>
                     <Grid item xl={4} lg={6}>
                         <a className="card card-box-hover-rise bg-white" onClick={() => {
-                            setTopic(3);
-                            setIsListTopic(true);
+                            topic.map((value,i)=>{
+                                if (i === 3) {
+                                    setTopicId(value.id);
+                                    console.log(value.id)
+                                    setIsListTopic(true);
+                                }
+                            })
                         }}>
                             <img alt="..." className="card-img-top" src="https://www.evn.com.vn/userfile/User/thuhatcdl/images/2019/6/khaiquatthuydien.jpg" height="257" />
                             <CardContent className="card-body-avatar px-4 pb-4">
@@ -111,8 +121,13 @@ const TopicsNews = () => {
                     </Grid>
                     <Grid item xl={4} lg={6}>
                         <a className="card card-box-hover-rise bg-white" onClick={() => {
-                            setTopic(4);
-                            setIsListTopic(true);
+                            topic.map((value,i)=>{
+                                if (i === 4) {
+                                    setTopicId(value.id);
+                                    console.log(value.id)
+                                    setIsListTopic(true);
+                                }
+                            })
                         }}>
                             <img alt="..." className="card-img-top" src="https://www.evn.com.vn/userfile/User/xuantien/images/2022/11/Anh3CPMB12112022(1).jpg" height="257" />
                             <CardContent className="card-body-avatar px-4 pb-4">
@@ -135,8 +150,13 @@ const TopicsNews = () => {
                     </Grid>
                     <Grid item xl={4} lg={6}>
                         <a className="card card-box-hover-rise bg-white" onClick={() => {
-                            setTopic(5);
-                            setIsListTopic(true);
+                            topic.map((value,i)=>{
+                                if (i === 5) {
+                                    setTopicId(value.id);
+                                    console.log(value.id)
+                                    setIsListTopic(true);
+                                }
+                            })
                         }}>
                             <img alt="..." className="card-img-top" src="https://congthuong.vn/stores/news_dataimages/thanhhuong/062018/07/16/95f4c7f8fa7123a27964e35b98dddc46_1f.jpg" height="257" />
                             <CardContent className="card-body-avatar px-4 pb-4">
@@ -159,8 +179,13 @@ const TopicsNews = () => {
                     </Grid>
                     <Grid item xl={4} lg={6}>
                         <a className="card card-box-hover-rise bg-white" onClick={() => {
-                            setTopic(6);
-                            setIsListTopic(true);
+                            topic.map((value,i)=>{
+                                if (i === 6) {
+                                    setTopicId(value.id);
+                                    console.log(value.id)
+                                    setIsListTopic(true);
+                                }
+                            })
                         }}>
                             <img alt="..." className="card-img-top" src="https://hanoimoi.com.vn/Uploads/images/phananh/2020/07/02/dien.jpg" height="257" />
                             <CardContent className="card-body-avatar px-4 pb-4">
@@ -183,8 +208,13 @@ const TopicsNews = () => {
                     </Grid>
                     <Grid item xl={4} lg={12}>
                         <a className="card card-box-hover-rise bg-white" onClick={() => {
-                            setTopic(7);
-                            setIsListTopic(true);
+                            topic.map((value,i)=>{
+                                if (i === 7) {
+                                    setTopicId(value.id);
+                                    console.log(value.id)
+                                    setIsListTopic(true);
+                                }
+                            })
                         }}>
                             <img alt="..." className="card-img-top" src="https://vnn-imgs-f.vgcloud.vn/2019/12/17/14/dien-luc-viet-nam-65-nam-phuc-vu-nhan-dan.jpg" />
                             <CardContent className="card-body-avatar px-4 pb-4">
