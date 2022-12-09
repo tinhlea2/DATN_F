@@ -1,5 +1,5 @@
-import React, {useState } from "react";
-import { Box, Button, CardContent } from "@material-ui/core";
+import React    from "react";
+import { Box, Button} from "@material-ui/core";
 import { useStyles } from "components/modules/publics/styles";
 
 const NewsDetails = ({ news, setImage, setIsFullNews, setNews }) => {

@@ -1,11 +1,9 @@
 import React from "react";
 import {
     Box,
-    Button,
     Container,
     Table,
 } from "@material-ui/core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
 

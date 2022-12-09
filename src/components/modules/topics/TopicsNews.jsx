@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ListTopicNews from "./ListTopicNews";
 import { useDispatch } from "react-redux";
 import { getlistTopicNews, newsActions } from "state/modules/news/newsSlice";
+import useNotification from "utils/hooks/notification";
 
 const TopicsNews = () => {
     const [isListTopic, setIsListTopic] = useState(false);
@@ -10,6 +11,7 @@ const TopicsNews = () => {
     const [topic, setTopic] = useState([]);
     const [isGet, setIsGet] = useState(true);
     const [topicId, setTopicId] = useState(1);
+    const { showError } = useNotification();
     useEffect(() => {
         setIsGet(true);;
         dispatch(newsActions.getlistTopicNews({

@@ -7,7 +7,7 @@ import {
     Container,
     Grid,
 } from "@material-ui/core";
-import { getNewNews, newsActions } from "state/modules/news/newsSlice";
+import { newsActions } from "state/modules/news/newsSlice";
 import { useDispatch } from "react-redux";
 import useNotification from "utils/hooks/notification";
 import { useStyles } from "components/modules/publics/styles";
@@ -22,7 +22,6 @@ const HomeNews = () => {
     const [isGet, setIsGet] = useState(true);
     const [numpage, setStart] = useState(1);
     const [news, setNews] = useState({});
-    const [image, setImage] = useState([]);
     const [isFullNews, setIsFullNews] = useState(false);
     useEffect(() => {
         setIsGet(true);

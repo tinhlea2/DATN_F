@@ -1,15 +1,15 @@
 import { CardContent, Grid } from "@material-ui/core";
 import React from "react";
 
-const topics = [
-    "https://cdn.tgdd.vn/2020/04/GameApp/1587799989800-200x197.jpg",
-    "https://qandme.net/images/icon-05.png",
-    "https://cdn2.iconfinder.com/data/icons/space-118/512/730_management_process_production_task_work_business_elements_management-512.png",
-    "https://hoithaonik.com/wp-content/uploads/2018/10/icon-dau-tu-1-6.png",
-    "https://png.pngtree.com/png-vector/20191004/ourlarge/pngtree-staircase-icon-png-image_1790175.jpg",
-    "https://png.pngtree.com/png-vector/20190215/ourlarge/pngtree-vector-lightning-button-icon-png-image_537154.jpg",
-    "https://whypay.vn/assets/images/billpaying/thanh-toan-tien-dien.png",
-];
+// const topics = [
+//     "https://cdn.tgdd.vn/2020/04/GameApp/1587799989800-200x197.jpg",
+//     "https://qandme.net/images/icon-05.png",
+//     "https://cdn2.iconfinder.com/data/icons/space-118/512/730_management_process_production_task_work_business_elements_management-512.png",
+//     "https://hoithaonik.com/wp-content/uploads/2018/10/icon-dau-tu-1-6.png",
+//     "https://png.pngtree.com/png-vector/20191004/ourlarge/pngtree-staircase-icon-png-image_1790175.jpg",
+//     "https://png.pngtree.com/png-vector/20190215/ourlarge/pngtree-vector-lightning-button-icon-png-image_537154.jpg",
+//     "https://whypay.vn/assets/images/billpaying/thanh-toan-tien-dien.png",
+// ];
 
 const CardNews = ({ news, setIsFullNews, setNews }) => {
     return (<Grid item xl={4} lg={6}>
