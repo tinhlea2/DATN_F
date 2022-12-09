@@ -31,8 +31,8 @@ const ListTopicNews = ({ topicId, setIsListTopic }) => {
             // limit: 10,
             onComplete: (error, data) => {
                 if (!error) {
-                    console.log(data.results[0].news);
-                    setGetList(data.results[0].news);
+                    console.log(data.news);
+                    setGetList(data.news);
                     setIsGet(false);
                     return;
                 }

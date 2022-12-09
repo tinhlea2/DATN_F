@@ -18,7 +18,7 @@ const TopicsNews = () => {
             onComplete: (error, data) => {
                 setIsGet(false);
                 if (!error) {
-                    // console.log(data.results);
+                    console.log(data.results);
                     setTopic(data.results);
                     setIsGet(false);
                     console.log(data.results);
