@@ -81,12 +81,12 @@ const TopicsNews = () => {
                                     </div>
                                 </div>
                                 <h5 className="card-title font-weight-bold font-size-xl">
-                                    Thị trường điện
+                                    Thông tin và sự kiện
                             </h5>
                                 <p className="card-text">
                                     Bao gồm các bản tin liên quan đến
                                     thị trường điện lực trong nước và
-                                    nước ngoài, lịch cắt điện, giá thành...
+                                    và các sự kiện
                             </p>
                                 <div className="card-date text-black-50 mt-2"></div>
                             </CardContent>
@@ -124,7 +124,7 @@ const TopicsNews = () => {
                     <Grid item xl={4} lg={6}>
                         <a className="card card-box-hover-rise bg-white" onClick={() => {
                             topic.map((value,i)=>{
-                                if (i === 4) {
+                                if (i === 2) {
                                     setTopicId(value.id);
                                     console.log(value.id)
                                     setIsListTopic(true);
@@ -168,11 +168,11 @@ const TopicsNews = () => {
                                     </div>
                                 </div>
                                 <h5 className="card-title font-weight-bold font-size-xl">
-                                    Đổi mới doanh nghiệp
+                                    Công nghệ và môi trường
                             </h5>
                                 <p className="card-text">
-                                    Bao gồm các bản tin liên quan đến đổi mới
-                                    doanh nghiệp điện lực,
+                                    Bao gồm các bản tin liên quan đến công nghệ và môi 
+                                    trường,
                                     hướng phát triển của doanh nghiệp đã và đang.
                             </p>
                                 <div className="card-date text-black-50 mt-2"></div>
@@ -182,7 +182,7 @@ const TopicsNews = () => {
                     <Grid item xl={4} lg={6}>
                         <a className="card card-box-hover-rise bg-white" onClick={() => {
                             topic.map((value,i)=>{
-                                if (i === 6) {
+                                if (i === 4) {
                                     setTopicId(value.id);
                                     console.log(value.id)
                                     setIsListTopic(true);
@@ -203,35 +203,6 @@ const TopicsNews = () => {
                                     Bao gồm các bản tin liên quan đến năng
                                     lượng trong ngành điện lực nước nhà,
                                     sự phát triển của các loại năng lượng.
-                            </p>
-                                <div className="card-date text-black-50 mt-2"></div>
-                            </CardContent>
-                        </a>
-                    </Grid>
-                    <Grid item xl={4} lg={12}>
-                        <a className="card card-box-hover-rise bg-white" onClick={() => {
-                            topic.map((value,i)=>{
-                                if (i === 7) {
-                                    setTopicId(value.id);
-                                    console.log(value.id)
-                                    setIsListTopic(true);
-                                }
-                            })
-                        }}>
-                            <img alt="..." className="card-img-top" src="https://vnn-imgs-f.vgcloud.vn/2019/12/17/14/dien-luc-viet-nam-65-nam-phuc-vu-nhan-dan.jpg" />
-                            <CardContent className="card-body-avatar px-4 pb-4">
-                                <div className="avatar-icon-wrapper rounded-pill border-white border-3 avatar-icon-wrapper--sm">
-                                    <div className="avatar-icon rounded-pill">
-                                        <img alt="..." src="https://whypay.vn/assets/images/billpaying/thanh-toan-tien-dien.png" height="74" width="74" />
-                                    </div>
-                                </div>
-                                <h5 className="card-title font-weight-bold font-size-xl">
-                                    Khoa học công nghệ
-                            </h5>
-                                <p className="card-text">
-                                    Bao gồm các bản tin liên quan đến khoa học
-                                    và công nghệ trong ngành điện lực nước nhà,
-                                    sự phát triển cũng như thành quả đã đạt được.
                             </p>
                                 <div className="card-date text-black-50 mt-2"></div>
                             </CardContent>

@@ -32,6 +32,7 @@ const ListTopicNews = ({ topicId, setIsListTopic }) => {
             onComplete: (error, data) => {
                 if (!error) {
                     console.log(data.news);
+                    console.log(data.news.length)
                     setGetList(data.news);
                     setIsGet(false);
                     return;
@@ -62,27 +63,6 @@ const ListTopicNews = ({ topicId, setIsListTopic }) => {
                 }
             </Box>
             <Box p={3} display="flex" flexDirection="row-reverse">
-                <Button
-                    // disabled={getList.length < 10}
-                    className={classes.btnNext}
-                    style={{ marginLeft: "25px" }}
-                    onClick={() => {
-                        setStart(start + 10);
-                    }}
-                >
-                    NEXT
-                </Button>
-                <Button
-                    disabled={start === 0}
-                    variant="contained"
-                    style={{ marginLeft: "25px" }}
-                    className={classes.btnBack}
-                    onClick={() => {
-                        setStart(start - 10);
-                    }}
-                >
-                    BACK
-                </Button>
                 <Button
                     variant="contained"
                     className={classes.btnBack}

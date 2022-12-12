@@ -43,7 +43,7 @@ const NewsDetails = ({ news, setImage, setIsFullNews, setNews }) => {
                         return <div>
                             <p>{test[0]}</p>
                             <p>{test[1]}</p> 
-                            <img className="card-img-top" src={value.image.trim() === "" ?"https://congdoandlvn.org.vn/pic/banner/Ky-niem-6_638041001767718561_HasThumb.jpg":value.image} height="74" width="74"/>
+                            <img className="card-img-top" src={value.image.trim() === "" ?"https://www.evn.com.vn/userfile/images/BannerLink/congdoandienlucvietnam.jpg":value.image} height="74" width="74"/>
                             <h6 className="avatar-initials" >{value.description_img}</h6>
                         </div>
                     })}
